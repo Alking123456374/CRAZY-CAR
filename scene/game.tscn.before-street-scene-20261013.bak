@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://r8e5vdmp0k17"]
+
+[ext_resource type="Script" uid="uid://lmmb43nqrjda" path="res://scripts/game.gd" id="1_17rxn"]
+[ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_dbls1"]
+[ext_resource type="PackedScene" uid="uid://bjy1c24lq0gf7" path="res://scene/player.tscn" id="2_33cqm"]
+[ext_resource type="PackedScene" uid="uid://e1nbuerpmk0f" path="res://scene/tree.tscn" id="3_33cqm"]
+[ext_resource type="PackedScene" uid="uid://d4g3kjr7fpqvb" path="res://scene/people.tscn" id="3_81276"]
+[ext_resource type="PackedScene" uid="uid://dvjejjla530b2" path="res://scene/car1.tscn" id="4_xwcet"]
+[ext_resource type="Script" uid="uid://u60n14jhk3p7" path="res://scripts/creatCar.gd" id="5_xlg7c"]
+[ext_resource type="PackedScene" uid="uid://bmijsxobcwcox" path="res://scene/car2.tscn" id="6_ll5lq"]
+[ext_resource type="PackedScene" uid="uid://cqw6406mp7ak8" path="res://scene/car3.tscn" id="7_17rxn"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="8_ll5lq"]
+[ext_resource type="Texture2D" uid="uid://bkgrir378horu" path="res://graphics/player/player_simple.png" id="10_sng2h"]
+[ext_resource type="AudioStream" uid="uid://d05385du5fc0j" path="res://audio/S31-City on Speed.ogg" id="10_yq8tf"]
+[ext_resource type="AudioStream" uid="uid://dje5pbo2orx3l" path="res://audio/not-a-big-crash.mp3" id="11_ym5sv"]
+[ext_resource type="PackedScene" uid="uid://bjy72q2obme1f" path="res://scene/body.tscn" id="14_81276"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn14k"]
+size = Vector2(21.896652, 20)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fn14k"]
+
+[node name="game" type="Node2D" unique_id=643946123 node_paths=PackedStringArray("scoreLabel", "hpCanvas")]
+y_sort_enabled = true
+script = ExtResource("1_17rxn")
+scoreLabel = NodePath("CanvasLayer/scoreLabel")
+hpCanvas = NodePath("CanvasLayer/MarginContainer/HBoxContainer")
+heartImg = ExtResource("10_sng2h")
+peopleImg = ExtResource("3_81276")
+
+[node name="basic_Map" type="Sprite2D" parent="." unique_id=507508372]
+z_index = -1
+texture = ExtResource("1_dbls1")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="basic_Map" unique_id=2117485529]
+visibility_layer = 0
+offset_left = -79.0
+offset_top = -224.0
+offset_right = -39.0
+offset_bottom = -184.0
+scale = Vector2(4.7301106, 2.3189065)
+color = Color(1, 1, 1, 0.35686275)
+
+[node name="Label" type="Label" parent="basic_Map" unique_id=1858703109]
+visibility_layer = 0
+offset_left = -5.0
+offset_top = -186.0
+offset_right = 35.0
+offset_bottom = -163.0
+theme_override_colors/font_color = Color(1, 0.54901963, 0.12156863, 1)
+theme_override_fonts/font = ExtResource("8_ll5lq")
+text = "终点"
+
+[node name="Area2D" type="Area2D" parent="basic_Map" unique_id=862518773]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="basic_Map/Area2D" unique_id=1195041238]
+visibility_layer = 2
+position = Vector2(15.210507, -178)
+scale = Vector2(8.657899, 4.6087775)
+shape = SubResource("RectangleShape2D_fn14k")
+
+[node name="borders" type="Node2D" parent="." unique_id=1331777709]
+light_mask = 8
+visibility_layer = 2
+metadata/_edit_lock_ = true
+
+[node name="up" type="StaticBody2D" parent="borders" unique_id=1676696573]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/up" unique_id=153901532]
+position = Vector2(1, -320)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_fn14k")
+
+[node name="down" type="StaticBody2D" parent="borders" unique_id=801176157]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/down" unique_id=728338879]
+position = Vector2(1, 320)
+shape = SubResource("WorldBoundaryShape2D_fn14k")
+
+[node name="left" type="StaticBody2D" parent="borders" unique_id=1572328738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borders/left" unique_id=2004652160]
+position = Vector2(-192, 0)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_fn14k")
+
+[node name="right" type="StaticBody2D" parent="borders" unique_id=1012842506]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="borders/right" unique_id=1260287122]
+position = Vector2(192, 0)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_fn14k")
+
+[node name="Tree" parent="." unique_id=713515236 instance=ExtResource("3_33cqm")]
+y_sort_enabled = true
+position = Vector2(-38, 232)
+collision_layer = 3
+
+[node name="Timer" type="Timer" parent="." unique_id=611265770]
+wait_time = 0.3
+autostart = true
+
+[node name="carInstance" type="Node2D" parent="." unique_id=390194290]
+position = Vector2(239, 3)
+metadata/_edit_lock_ = true
+
+[node name="creatCar" type="Node2D" parent="." unique_id=640326755]
+position = Vector2(199, 6)
+script = ExtResource("5_xlg7c")
+carList = Array[PackedScene]([ExtResource("4_xwcet"), ExtResource("6_ll5lq"), ExtResource("7_17rxn")])
+bodyImg = ExtResource("14_81276")
+metadata/_edit_lock_ = true
+
+[node name="creatPoint1" type="Node2D" parent="creatCar" unique_id=1671039708]
+position = Vector2(7, -30)
+
+[node name="creatPoint2" type="Node2D" parent="creatCar" unique_id=1217181574]
+position = Vector2(-404, 109)
+
+[node name="creatPoint8" type="Node2D" parent="creatCar" unique_id=1090435830]
+position = Vector2(-405, -2)
+
+[node name="creatPoint9" type="Node2D" parent="creatCar" unique_id=1412743445]
+position = Vector2(-405, -99)
+
+[node name="creatPoint3" type="Node2D" parent="creatCar" unique_id=889577313]
+position = Vector2(-404, 158)
+
+[node name="creatPoint4" type="Node2D" parent="creatCar" unique_id=772797108]
+position = Vector2(5, 88)
+
+[node name="creatPoint7" type="Node2D" parent="creatCar" unique_id=475894541]
+position = Vector2(6, 135)
+
+[node name="creatPoint5" type="Node2D" parent="creatCar" unique_id=1390872892]
+position = Vector2(8, -57)
+
+[node name="creatPoint6" type="Node2D" parent="creatCar" unique_id=1526302093]
+position = Vector2(7, -122)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1885037007]
+
+[node name="scoreLabel" type="Label" parent="CanvasLayer" unique_id=65480408]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 11.0
+offset_right = 90.0
+offset_bottom = 49.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.25882354, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("8_ll5lq")
+theme_override_font_sizes/font_size = 30
+text = "score: 0"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1304368480]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=569983392]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 2
+
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=398263049]
+stream = ExtResource("10_yq8tf")
+autoplay = true
+
+[node name="crash" type="AudioStreamPlayer" parent="." unique_id=1054877687]
+stream = ExtResource("11_ym5sv")
+volume_db = 24.0
+
+[node name="player" parent="." unique_id=1641638648 instance=ExtResource("2_33cqm")]
+position = Vector2(-103, 224)
+speed = 50.0
+
+[connection signal="timeout" from="Timer" to="creatCar" method="_on_timer_timeout"]

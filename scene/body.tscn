@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bjy72q2obme1f"]
+
+[ext_resource type="Texture2D" uid="uid://dfr3j5akdp4yl" path="res://graphics/player/player_hit.png" id="1_u5yd7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn14k"]
+size = Vector2(18.000004, 17.500004)
+
+[node name="Body" type="StaticBody2D" unique_id=851173593]
+scale = Vector2(0.7999998, 0.7999998)
+collision_mask = 2
+
+[node name="PlayerHit" type="Sprite2D" parent="." unique_id=1337902443]
+scale = Vector2(0.017015409, 0.017015409)
+texture = ExtResource("1_u5yd7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1408123277]
+position = Vector2(-1.0000014, -3.7500017)
+shape = SubResource("RectangleShape2D_fn14k")

@@ -1,0 +1,749 @@
+[gd_scene format=3 uid="uid://cart0vh07gifx"]
+
+[ext_resource type="Script" path="res://scripts/home.gd" id="script"]
+
+[ext_resource type="FontFile" path="res://fonts/Crackman.otf" id="title"]
+
+[ext_resource type="FontFile" path="res://fonts/Better VCR 9.0.1.ttf" id="pixel"]
+
+[ext_resource type="Texture2D" path="res://graphics/map.png" id="map"]
+
+[ext_resource type="Texture2D" path="res://graphics/player/player_simple.png" id="player"]
+
+[ext_resource type="Texture2D" path="res://graphics/cars/green.png" id="green"]
+
+[ext_resource type="Texture2D" path="res://graphics/cars/red.png" id="red"]
+
+[ext_resource type="Texture2D" path="res://graphics/cars/yellow.png" id="taxi"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/house1.png" id="house"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/tree1.png" id="tree"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/bench.png" id="bench"]
+
+[ext_resource type="AudioStream" path="res://audio/S31-City on Speed.ogg" id="music"]
+
+[sub_resource type="StyleBoxFlat" id="score"]
+bg_color = Color(0.09804, 0.21569, 0.18039, 1.00000)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.20392, 0.32941, 0.27843, 1.00000)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="frame"]
+bg_color = Color(0.12941, 0.24706, 0.20784, 1.00000)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29412, 0.41176, 0.34510, 1.00000)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.02353, 0.10196, 0.08235, 0.65000)
+shadow_size = 16
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="key"]
+bg_color = Color(0.10588, 0.21961, 0.18431, 1.00000)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.27059, 0.37647, 0.32157, 1.00000)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="normal"]
+bg_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.02353, 0.10196, 0.08235, 0.65000)
+shadow_size = 6
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="hover"]
+bg_color = Color(1.00000, 0.90196, 0.60392, 1.00000)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.02353, 0.10196, 0.08235, 0.65000)
+shadow_size = 8
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="pressed"]
+bg_color = Color(0.77647, 0.67451, 0.31373, 1.00000)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="focus"]
+bg_color = Color(0.00000, 0.00000, 0.00000, 0.00000)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1.00000, 0.95294, 0.69412, 1.00000)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="Animation" id="traffic"]
+resource_name = "traffic"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Preview/Street/GreenCar:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 8.054, 8.055, 10), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(28, 152), Vector2(442, 152), Vector2(-72, 152), Vector2(28, 152)]}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Preview/Street/RedCar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 8.404, 8.405, 10), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(360, 267), Vector2(-72, 267), Vector2(442, 267), Vector2(360, 267)]}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Preview/Street/Taxi:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 6.459, 6.46, 10), "transitions": PackedFloat32Array(1, 1, 1, 1), "update": 0, "values": [Vector2(110, 80), Vector2(442, 80), Vector2(-72, 80), Vector2(110, 80)]}
+
+[sub_resource type="AnimationLibrary" id="animations"]
+_data = {"traffic": SubResource("traffic")}
+
+[node name="Home" type="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_filter = 1
+script = ExtResource("script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.06275, 0.16078, 0.13725, 1.00000)
+
+[node name="Layout" type="Control" parent="."]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 1152
+offset_bottom = 648
+mouse_filter = 2
+
+[node name="BrandMark" type="ColorRect" parent="Layout"]
+layout_mode = 0
+offset_left = 64
+offset_top = 37
+offset_right = 76
+offset_bottom = 49
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+
+[node name="Brand" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 86
+offset_top = 30
+offset_right = 436
+offset_bottom = 58
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 13
+text = "FROGGER  /  STREET ARCADE"
+vertical_alignment = 1
+
+[node name="HeaderNote" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 696
+offset_top = 30
+offset_right = 1086
+offset_bottom = 58
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 12
+text = "ONE MORE CROSSING."
+vertical_alignment = 1
+horizontal_alignment = 2
+
+[node name="HeaderRule" type="ColorRect" parent="Layout"]
+layout_mode = 0
+offset_left = 64
+offset_top = 68
+offset_right = 1086
+offset_bottom = 69
+mouse_filter = 2
+color = Color(0.21176, 0.32157, 0.27843, 1.00000)
+
+[node name="Menu" type="Control" parent="Layout"]
+layout_mode = 0
+offset_left = 64
+offset_top = 100
+offset_right = 554
+offset_bottom = 547
+mouse_filter = 2
+
+[node name="Eyebrow" type="Label" parent="Layout/Menu"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 490
+offset_bottom = 24
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 13
+text = "READY FOR THE RUSH?"
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="Layout/Menu"]
+layout_mode = 0
+offset_left = -4
+offset_top = 26
+offset_right = 506
+offset_bottom = 210
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_fonts/font = ExtResource("title")
+theme_override_font_sizes/font_size = 98
+text = "CRAZY\nCAR"
+vertical_alignment = 1
+theme_override_constants/line_spacing = -23
+theme_override_colors/font_shadow_color = Color(0.00000, 0.00000, 0.00000, 0.35000)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 5
+
+[node name="Tagline" type="Label" parent="Layout/Menu"]
+layout_mode = 0
+offset_left = 0
+offset_top = 219
+offset_right = 490
+offset_bottom = 251
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 17
+text = "DODGE. CROSS. REPEAT."
+vertical_alignment = 1
+
+[node name="ScorePanel" type="Panel" parent="Layout/Menu"]
+layout_mode = 0
+offset_left = 0
+offset_top = 270
+offset_right = 346
+offset_bottom = 336
+mouse_filter = 2
+theme_override_styles/panel = SubResource("score")
+
+[node name="ScoreAccent" type="ColorRect" parent="Layout/Menu/ScorePanel"]
+layout_mode = 0
+offset_left = 0
+offset_top = 16
+offset_right = 3
+offset_bottom = 50
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+
+[node name="ScoreCaption" type="Label" parent="Layout/Menu/ScorePanel"]
+layout_mode = 0
+offset_left = 22
+offset_top = 9
+offset_right = 247
+offset_bottom = 29
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 11
+text = "PERSONAL BEST"
+vertical_alignment = 1
+
+[node name="ScoreUnit" type="Label" parent="Layout/Menu/ScorePanel"]
+layout_mode = 0
+offset_left = 22
+offset_top = 30
+offset_right = 247
+offset_bottom = 55
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 14
+text = "CROSSINGS"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Layout/Menu/ScorePanel"]
+layout_mode = 0
+offset_left = 238
+offset_top = 4
+offset_right = 327
+offset_bottom = 60
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 32
+text = "000"
+vertical_alignment = 1
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="Layout/Menu"]
+layout_mode = 0
+offset_left = 0
+offset_top = 358
+offset_right = 346
+offset_bottom = 422
+mouse_default_cursor_shape = 2
+text = "START RUN   >"
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("normal")
+theme_override_styles/hover = SubResource("hover")
+theme_override_styles/pressed = SubResource("pressed")
+theme_override_styles/focus = SubResource("focus")
+theme_override_colors/font_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
+theme_override_colors/font_hover_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
+theme_override_colors/font_pressed_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
+theme_override_colors/font_focus_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
+
+[node name="StartHint" type="Label" parent="Layout/Menu"]
+layout_mode = 0
+offset_left = 0
+offset_top = 437
+offset_right = 346
+offset_bottom = 459
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 11
+text = "PRESS ENTER TO PLAY"
+vertical_alignment = 1
+horizontal_alignment = 1
+
+[node name="Preview" type="Panel" parent="Layout"]
+layout_mode = 0
+offset_left = 620
+offset_top = 100
+offset_right = 1086
+offset_bottom = 542
+mouse_filter = 2
+theme_override_styles/panel = SubResource("frame")
+
+[node name="PreviewTitle" type="Label" parent="Layout/Preview"]
+layout_mode = 0
+offset_left = 18
+offset_top = 8
+offset_right = 278
+offset_bottom = 36
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 12
+text = "THE CITY CROSSING"
+vertical_alignment = 1
+
+[node name="LiveDot" type="ColorRect" parent="Layout/Preview"]
+layout_mode = 0
+offset_left = 386
+offset_top = 19
+offset_right = 392
+offset_bottom = 25
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+
+[node name="LiveCaption" type="Label" parent="Layout/Preview"]
+layout_mode = 0
+offset_left = 399
+offset_top = 8
+offset_right = 450
+offset_bottom = 36
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 10
+text = "LIVE"
+vertical_alignment = 1
+
+[node name="Street" type="Control" parent="Layout/Preview"]
+layout_mode = 0
+offset_left = 12
+offset_top = 44
+offset_right = 454
+offset_bottom = 430
+mouse_filter = 2
+clip_contents = true
+
+[node name="Map" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 0
+offset_top = -184
+offset_right = 442
+offset_bottom = 553
+mouse_filter = 2
+texture = ExtResource("map")
+expand_mode = 1
+stretch_mode = 0
+modulate = Color(0.63137, 0.70980, 0.62745, 1.00000)
+
+[node name="House" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 32
+offset_top = -54
+offset_right = 180
+offset_bottom = 70
+mouse_filter = 2
+texture = ExtResource("house")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="TreeLeft" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 6
+offset_top = 2
+offset_right = 48
+offset_bottom = 74
+mouse_filter = 2
+texture = ExtResource("tree")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="TreeRight" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 376
+offset_top = -5
+offset_right = 425
+offset_bottom = 79
+mouse_filter = 2
+texture = ExtResource("tree")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Bench" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 314
+offset_top = 39
+offset_right = 376
+offset_bottom = 61
+mouse_filter = 2
+texture = ExtResource("bench")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Route00" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 58
+offset_right = 243
+offset_bottom = 67
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route01" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 81
+offset_right = 243
+offset_bottom = 90
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route02" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 104
+offset_right = 243
+offset_bottom = 113
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route03" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 127
+offset_right = 243
+offset_bottom = 136
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route04" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 150
+offset_right = 243
+offset_bottom = 159
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route05" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 173
+offset_right = 243
+offset_bottom = 182
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route06" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 196
+offset_right = 243
+offset_bottom = 205
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route07" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 219
+offset_right = 243
+offset_bottom = 228
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route08" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 242
+offset_right = 243
+offset_bottom = 251
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route09" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 265
+offset_right = 243
+offset_bottom = 274
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Route10" type="ColorRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 239
+offset_top = 288
+offset_right = 243
+offset_bottom = 297
+mouse_filter = 2
+color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+
+[node name="Destination" type="Polygon2D" parent="Layout/Preview/Street"]
+position = Vector2(241, 47)
+polygon = PackedVector2Array(-7, 8, 0, 0, 7, 8, 3, 8, 3, 14, -3, 14, -3, 8)
+color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+
+[node name="GreenCar" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 28
+offset_top = 152
+offset_right = 100
+offset_bottom = 212
+mouse_filter = 2
+texture = ExtResource("green")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="RedCar" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 360
+offset_top = 267
+offset_right = 432
+offset_bottom = 327
+mouse_filter = 2
+texture = ExtResource("red")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Taxi" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 110
+offset_top = 80
+offset_right = 182
+offset_bottom = 140
+mouse_filter = 2
+texture = ExtResource("taxi")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="HeroShadow" type="Polygon2D" parent="Layout/Preview/Street"]
+position = Vector2(241, 356)
+polygon = PackedVector2Array(-26, -7, -18, -11, 18, -11, 26, -7, 26, 7, 18, 11, -18, 11, -26, 7)
+color = Color(0.03529, 0.11765, 0.09412, 0.45000)
+
+[node name="Hero" type="TextureRect" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 214
+offset_top = 296
+offset_right = 268
+offset_bottom = 359
+mouse_filter = 2
+texture = ExtResource("player")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="HeroCaption" type="Label" parent="Layout/Preview/Street"]
+layout_mode = 0
+offset_left = 135
+offset_top = 356
+offset_right = 350
+offset_bottom = 380
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 10
+text = "YOUR NEXT ADVENTURE"
+vertical_alignment = 1
+horizontal_alignment = 1
+theme_override_colors/font_shadow_color = Color(0.03922, 0.12549, 0.09412, 1.00000)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+
+[node name="PreviewCaption" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 620
+offset_top = 550
+offset_right = 1086
+offset_bottom = 574
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 11
+text = "WATCH THE TRAFFIC. FIND YOUR MOMENT."
+vertical_alignment = 1
+horizontal_alignment = 1
+
+[node name="FooterRule" type="ColorRect" parent="Layout"]
+layout_mode = 0
+offset_left = 64
+offset_top = 588
+offset_right = 1086
+offset_bottom = 589
+mouse_filter = 2
+color = Color(0.21176, 0.32157, 0.27843, 1.00000)
+
+[node name="MoveKey" type="Panel" parent="Layout"]
+layout_mode = 0
+offset_left = 64
+offset_top = 607
+offset_right = 133
+offset_bottom = 634
+mouse_filter = 2
+theme_override_styles/panel = SubResource("key")
+
+[node name="MoveKeyText" type="Label" parent="Layout/MoveKey"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 69
+offset_bottom = 27
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 12
+text = "WASD"
+vertical_alignment = 1
+horizontal_alignment = 1
+
+[node name="MoveHelp" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 146
+offset_top = 607
+offset_right = 416
+offset_bottom = 634
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 12
+text = "/ ARROWS TO MOVE"
+vertical_alignment = 1
+
+[node name="SprintKey" type="Panel" parent="Layout"]
+layout_mode = 0
+offset_left = 438
+offset_top = 607
+offset_right = 514
+offset_bottom = 634
+mouse_filter = 2
+theme_override_styles/panel = SubResource("key")
+
+[node name="SprintKeyText" type="Label" parent="Layout/SprintKey"]
+layout_mode = 0
+offset_left = 0
+offset_top = 0
+offset_right = 76
+offset_bottom = 27
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 12
+text = "SHIFT"
+vertical_alignment = 1
+horizontal_alignment = 1
+
+[node name="SprintHelp" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 527
+offset_top = 607
+offset_right = 707
+offset_bottom = 634
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 12
+text = "TO SPRINT"
+vertical_alignment = 1
+
+[node name="FooterNote" type="Label" parent="Layout"]
+layout_mode = 0
+offset_left = 798
+offset_top = 607
+offset_right = 1086
+offset_bottom = 634
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_fonts/font = ExtResource("pixel")
+theme_override_font_sizes/font_size = 11
+text = "EVERY CROSSING COUNTS."
+vertical_alignment = 1
+horizontal_alignment = 2
+
+[node name="TrafficAnimation" type="AnimationPlayer" parent="Layout"]
+libraries = {"": SubResource("animations")}
+autoplay = "traffic"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("music")
+autoplay = true
+
+[connection signal="pressed" from="Layout/Menu/Button" to="." method="_on_button_pressed"]

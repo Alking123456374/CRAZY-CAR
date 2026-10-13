@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d4g3kjr7fpqvb"]
+
+[ext_resource type="Texture2D" uid="uid://bkgrir378horu" path="res://graphics/player/player_simple.png" id="1_e5t1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn14k"]
+size = Vector2(12, 10)
+
+[node name="People" type="StaticBody2D" unique_id=346541678]
+y_sort_enabled = true
+
+[node name="PlayerSimple" type="Sprite2D" parent="." unique_id=953513773]
+texture = ExtResource("1_e5t1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890843801]
+y_sort_enabled = true
+shape = SubResource("RectangleShape2D_fn14k")

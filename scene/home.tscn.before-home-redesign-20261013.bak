@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://cart0vh07gifx"]
+
+[ext_resource type="Script" uid="uid://c4fsuq5uu2o5w" path="res://scripts/home.gd" id="1_8wrg1"]
+[ext_resource type="FontFile" uid="uid://dr201ov4c76pb" path="res://fonts/Crackman.otf" id="1_u2hr5"]
+[ext_resource type="Texture2D" uid="uid://bkgrir378horu" path="res://graphics/player/player_simple.png" id="2_7dqlj"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="3_dpldj"]
+[ext_resource type="AudioStream" uid="uid://d05385du5fc0j" path="res://audio/S31-City on Speed.ogg" id="5_c6rhi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wrg1"]
+bg_color = Color(0.7996938, 0.537063, 0.19385418, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+shadow_size = 20
+
+[node name="Home" type="Control" unique_id=480831235]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8wrg1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=67908523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34117648, 0.039215688, 0.99607843, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1269847972]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -437.0
+offset_top = 70.0
+offset_right = 437.0
+offset_bottom = 263.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_u2hr5")
+theme_override_font_sizes/font_size = 160
+text = "crazy car"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2079291497]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -59.0
+offset_right = -17.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+texture = ExtResource("2_7dqlj")
+
+[node name="Label2" type="Label" parent="." unique_id=309670533]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -200.0
+offset_right = 240.0
+offset_bottom = -131.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_dpldj")
+theme_override_font_sizes/font_size = 40
+text = "history score : 123"
+
+[node name="Button" type="Button" parent="." unique_id=1032290305]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -116.5
+offset_top = -120.0
+offset_right = 116.5
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1, 1.0070331)
+theme_override_fonts/font = ExtResource("3_dpldj")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_8wrg1")
+text = "start
+"
+icon_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=495487112]
+stream = ExtResource("5_c6rhi")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

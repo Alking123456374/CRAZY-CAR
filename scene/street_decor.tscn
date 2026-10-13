@@ -1,0 +1,1055 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/barrier.png" id="tex_0"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/bench.png" id="tex_1"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/bin.png" id="tex_2"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/box1.png" id="tex_3"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/box2.png" id="tex_4"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/box3.png" id="tex_5"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/green car.png" id="tex_6"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/house1.png" id="tex_7"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/house2.png" id="tex_8"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/house3.png" id="tex_9"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/light.png" id="tex_10"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/line.png" id="tex_11"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/red car.png" id="tex_12"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/sign.png" id="tex_13"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/taxi.png" id="tex_14"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/traffic.png" id="tex_15"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/tree potted.png" id="tex_16"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/tree1.png" id="tex_17"]
+
+[ext_resource type="Texture2D" path="res://graphics/objects/tree2.png" id="tex_18"]
+
+[ext_resource type="FontFile" path="res://fonts/Better VCR 9.0.1.ttf" id="font"]
+
+[sub_resource type="RectangleShape2D" id="shape_0"]
+size = Vector2(4, 5)
+
+[sub_resource type="RectangleShape2D" id="shape_1"]
+size = Vector2(6, 6)
+
+[sub_resource type="RectangleShape2D" id="shape_2"]
+size = Vector2(7, 8)
+
+[sub_resource type="RectangleShape2D" id="shape_3"]
+size = Vector2(8, 6)
+
+[sub_resource type="RectangleShape2D" id="shape_4"]
+size = Vector2(9, 6)
+
+[sub_resource type="RectangleShape2D" id="shape_5"]
+size = Vector2(10, 7)
+
+[sub_resource type="RectangleShape2D" id="shape_6"]
+size = Vector2(13, 17)
+
+[sub_resource type="RectangleShape2D" id="shape_7"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="shape_8"]
+size = Vector2(14, 7)
+
+[sub_resource type="RectangleShape2D" id="shape_9"]
+size = Vector2(42, 16)
+
+[sub_resource type="RectangleShape2D" id="shape_10"]
+size = Vector2(70, 18)
+
+[sub_resource type="RectangleShape2D" id="shape_11"]
+size = Vector2(86, 18)
+
+[node name="StreetDecor" type="Node2D"]
+y_sort_enabled = true
+
+[node name="GroundMarks" type="Node2D" parent="."]
+z_index = -1
+
+[node name="ParkingSurface" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-47, 253)
+polygon = PackedVector2Array(0, 0, 104, 0, 104, 43, 0, 43)
+color = Color(0.42, 0.45, 0.49, 1)
+
+[node name="ParkingCurb" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-49, 296)
+polygon = PackedVector2Array(0, 0, 108, 0, 108, 3, 0, 3)
+color = Color(0.74, 0.72, 0.65, 1)
+
+[node name="ParkingLine0" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-39, 258)
+polygon = PackedVector2Array(0, 0, 1, 0, 1, 33, 0, 33)
+color = Color(0.94, 0.89, 0.66, 1)
+
+[node name="ParkingLine1" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-10, 258)
+polygon = PackedVector2Array(0, 0, 1, 0, 1, 33, 0, 33)
+color = Color(0.94, 0.89, 0.66, 1)
+
+[node name="ParkingLine2" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(19, 258)
+polygon = PackedVector2Array(0, 0, 1, 0, 1, 33, 0, 33)
+color = Color(0.94, 0.89, 0.66, 1)
+
+[node name="ParkingLine3" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(48, 258)
+polygon = PackedVector2Array(0, 0, 1, 0, 1, 33, 0, 33)
+color = Color(0.94, 0.89, 0.66, 1)
+
+[node name="FinishStripe0" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-74, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe1" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-64, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe2" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-54, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe3" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-44, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe4" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-34, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe5" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-24, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe6" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-14, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe7" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-4, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe8" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(6, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe9" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(16, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe10" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(26, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe11" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(36, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe12" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(46, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe13" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(56, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe14" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(66, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe15" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(76, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishStripe16" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(86, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishStripe17" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(96, -154)
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 4, 0, 4)
+color = Color(0.21, 0.35, 0.32, 1)
+
+[node name="FinishEdgeWest" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-74, -194)
+polygon = PackedVector2Array(0, 0, 2, 0, 2, 40, 0, 40)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishEdgeEast" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(104, -194)
+polygon = PackedVector2Array(0, 0, 2, 0, 2, 40, 0, 40)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="FinishEdgeNorth" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-74, -194)
+polygon = PackedVector2Array(0, 0, 180, 0, 180, 2, 0, 2)
+color = Color(0.96, 0.90, 0.62, 1)
+
+[node name="StartArrow" type="Polygon2D" parent="GroundMarks"]
+position = Vector2(-104, 236)
+polygon = PackedVector2Array(0, -7, 7, 0, 3, 0, 3, 8, -3, 8, -3, 0, -7, 0)
+color = Color(0.97, 0.87, 0.56, 0.95)
+
+[node name="StartLabel" type="Label" parent="GroundMarks"]
+offset_left = -126.0
+offset_top = 266.0
+offset_right = -82.0
+offset_bottom = 279.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.98, 0.93, 0.75, 1)
+theme_override_colors/font_shadow_color = Color(0.17, 0.31, 0.29, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 8
+text = "START"
+horizontal_alignment = 1
+
+[node name="NorthApartment" type="StaticBody2D" parent="."]
+position = Vector2(-142, -198)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="NorthApartment"]
+position = Vector2(0, -56)
+texture = ExtResource("tex_8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthApartment"]
+position = Vector2(0, -9)
+shape = SubResource("shape_10")
+
+[node name="NorthShop" type="StaticBody2D" parent="."]
+position = Vector2(140, -222)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="NorthShop"]
+position = Vector2(0, -40)
+texture = ExtResource("tex_7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthShop"]
+position = Vector2(0, -9)
+shape = SubResource("shape_11")
+
+[node name="ParkTreeWest" type="StaticBody2D" parent="."]
+position = Vector2(-65, -250)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkTreeWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkTreeWest"]
+position = Vector2(0, -15)
+texture = ExtResource("tex_17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkTreeWest"]
+position = Vector2(0, -3)
+shape = SubResource("shape_3")
+
+[node name="ParkTreeCenter" type="StaticBody2D" parent="."]
+position = Vector2(3, -282)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkTreeCenter"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkTreeCenter"]
+position = Vector2(0, -15)
+texture = ExtResource("tex_17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkTreeCenter"]
+position = Vector2(0, -3)
+shape = SubResource("shape_3")
+
+[node name="ParkTreeEast" type="StaticBody2D" parent="."]
+position = Vector2(67, -250)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkTreeEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkTreeEast"]
+position = Vector2(0, -15)
+texture = ExtResource("tex_18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkTreeEast"]
+position = Vector2(0, -3)
+shape = SubResource("shape_3")
+
+[node name="ParkBench" type="StaticBody2D" parent="."]
+position = Vector2(-32, -244)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkBench"]
+z_index = -1
+polygon = PackedVector2Array(-4.05, -2, -2.6325, -3, 2.6325, -3, 4.05, -2, 4.05, 0, 2.6325, 1, -2.6325, 1, -4.05, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkBench"]
+position = Vector2(0, -8)
+texture = ExtResource("tex_1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkBench"]
+position = Vector2(0, -4)
+shape = SubResource("shape_2")
+
+[node name="ParkBin" type="StaticBody2D" parent="."]
+position = Vector2(32, -245)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkBin"]
+z_index = -1
+polygon = PackedVector2Array(-3.6, -2, -2.3400000000000003, -3, 2.3400000000000003, -3, 3.6, -2, 3.6, 0, 2.3400000000000003, 1, -2.3400000000000003, 1, -3.6, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkBin"]
+position = Vector2(0, -5.5)
+texture = ExtResource("tex_2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkBin"]
+position = Vector2(0, -3)
+shape = SubResource("shape_1")
+
+[node name="ParkPlanter" type="StaticBody2D" parent="."]
+position = Vector2(38, -286)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkPlanter"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkPlanter"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkPlanter"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="MarketCrateFruit" type="StaticBody2D" parent="."]
+position = Vector2(-151, -156)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="MarketCrateFruit"]
+z_index = -1
+polygon = PackedVector2Array(-5.4, -2, -3.5100000000000002, -3, 3.5100000000000002, -3, 5.4, -2, 5.4, 0, 3.5100000000000002, 1, -3.5100000000000002, 1, -5.4, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="MarketCrateFruit"]
+position = Vector2(0, -5)
+texture = ExtResource("tex_3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarketCrateFruit"]
+position = Vector2(0, -3.5)
+shape = SubResource("shape_5")
+
+[node name="MarketCrateGreens" type="StaticBody2D" parent="."]
+position = Vector2(-136, -156)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="MarketCrateGreens"]
+z_index = -1
+polygon = PackedVector2Array(-5.4, -2, -3.5100000000000002, -3, 3.5100000000000002, -3, 5.4, -2, 5.4, 0, 3.5100000000000002, 1, -3.5100000000000002, 1, -5.4, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="MarketCrateGreens"]
+position = Vector2(0, -5)
+texture = ExtResource("tex_4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarketCrateGreens"]
+position = Vector2(0, -3.5)
+shape = SubResource("shape_5")
+
+[node name="MarketCrateMixed" type="StaticBody2D" parent="."]
+position = Vector2(-117, -156)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="MarketCrateMixed"]
+z_index = -1
+polygon = PackedVector2Array(-7.2, -2, -4.680000000000001, -3, 4.680000000000001, -3, 7.2, -2, 7.2, 0, 4.680000000000001, 1, -4.680000000000001, 1, -7.2, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="MarketCrateMixed"]
+position = Vector2(0, -5)
+texture = ExtResource("tex_5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarketCrateMixed"]
+position = Vector2(0, -3.5)
+shape = SubResource("shape_8")
+
+[node name="FinishSignWest" type="StaticBody2D" parent="."]
+position = Vector2(-89, -146)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="FinishSignWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="FinishSignWest"]
+position = Vector2(0, -15)
+texture = ExtResource("tex_13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishSignWest"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="FinishSignEast" type="StaticBody2D" parent="."]
+position = Vector2(123, -146)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="FinishSignEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="FinishSignEast"]
+position = Vector2(0, -15)
+texture = ExtResource("tex_13")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishSignEast"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="NorthBench" type="StaticBody2D" parent="."]
+position = Vector2(-177, -151)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="NorthBench"]
+z_index = -1
+polygon = PackedVector2Array(-4.05, -2, -2.6325, -3, 2.6325, -3, 4.05, -2, 4.05, 0, 2.6325, 1, -2.6325, 1, -4.05, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="NorthBench"]
+position = Vector2(0, -8)
+texture = ExtResource("tex_1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthBench"]
+position = Vector2(0, -4)
+shape = SubResource("shape_2")
+
+[node name="NorthPlanter" type="StaticBody2D" parent="."]
+position = Vector2(158, -143)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="NorthPlanter"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="NorthPlanter"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthPlanter"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="NorthBin" type="StaticBody2D" parent="."]
+position = Vector2(176, -144)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="NorthBin"]
+z_index = -1
+polygon = PackedVector2Array(-3.6, -2, -2.3400000000000003, -3, 2.3400000000000003, -3, 3.6, -2, 3.6, 0, 2.3400000000000003, 1, -2.3400000000000003, 1, -3.6, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="NorthBin"]
+position = Vector2(0, -5.5)
+texture = ExtResource("tex_2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthBin"]
+position = Vector2(0, -3)
+shape = SubResource("shape_1")
+
+[node name="NorthTraffic" type="StaticBody2D" parent="."]
+position = Vector2(-177, -130)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="NorthTraffic"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="NorthTraffic"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthTraffic"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="NorthLamp" type="StaticBody2D" parent="."]
+position = Vector2(176, -130)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="NorthLamp"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="NorthLamp"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthLamp"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="RefugeBarrierWest" type="StaticBody2D" parent="."]
+position = Vector2(-135, -69)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="RefugeBarrierWest"]
+z_index = -1
+polygon = PackedVector2Array(-7.2, -2, -4.680000000000001, -3, 4.680000000000001, -3, 7.2, -2, 7.2, 0, 4.680000000000001, 1, -4.680000000000001, 1, -7.2, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="RefugeBarrierWest"]
+position = Vector2(0, -6)
+texture = ExtResource("tex_0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RefugeBarrierWest"]
+position = Vector2(0, -2)
+shape = SubResource("shape_7")
+
+[node name="RefugeLampWest" type="StaticBody2D" parent="."]
+position = Vector2(-26, -69)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="RefugeLampWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="RefugeLampWest"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RefugeLampWest"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="RefugeBarrierEast" type="StaticBody2D" parent="."]
+position = Vector2(139, -69)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="RefugeBarrierEast"]
+z_index = -1
+polygon = PackedVector2Array(-7.2, -2, -4.680000000000001, -3, 4.680000000000001, -3, 7.2, -2, 7.2, 0, 4.680000000000001, 1, -4.680000000000001, 1, -7.2, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="RefugeBarrierEast"]
+position = Vector2(0, -6)
+texture = ExtResource("tex_0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RefugeBarrierEast"]
+position = Vector2(0, -2)
+shape = SubResource("shape_7")
+
+[node name="PlazaPlanterWest" type="StaticBody2D" parent="."]
+position = Vector2(-174, 61)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaPlanterWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaPlanterWest"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaPlanterWest"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="PlazaBenchWest" type="StaticBody2D" parent="."]
+position = Vector2(-144, 61)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaBenchWest"]
+z_index = -1
+polygon = PackedVector2Array(-4.05, -2, -2.6325, -3, 2.6325, -3, 4.05, -2, 4.05, 0, 2.6325, 1, -2.6325, 1, -4.05, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaBenchWest"]
+position = Vector2(0, -8)
+texture = ExtResource("tex_1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaBenchWest"]
+position = Vector2(0, -4)
+shape = SubResource("shape_2")
+
+[node name="PlazaBinWest" type="StaticBody2D" parent="."]
+position = Vector2(-127, 61)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaBinWest"]
+z_index = -1
+polygon = PackedVector2Array(-3.6, -2, -2.3400000000000003, -3, 2.3400000000000003, -3, 3.6, -2, 3.6, 0, 2.3400000000000003, 1, -2.3400000000000003, 1, -3.6, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaBinWest"]
+position = Vector2(0, -5.5)
+texture = ExtResource("tex_2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaBinWest"]
+position = Vector2(0, -3)
+shape = SubResource("shape_1")
+
+[node name="PlazaPlanterInner" type="StaticBody2D" parent="."]
+position = Vector2(-28, 60)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaPlanterInner"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaPlanterInner"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaPlanterInner"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="PlazaPlanterEast" type="StaticBody2D" parent="."]
+position = Vector2(78, 61)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaPlanterEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaPlanterEast"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaPlanterEast"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="PlazaBinEast" type="StaticBody2D" parent="."]
+position = Vector2(116, 61)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaBinEast"]
+z_index = -1
+polygon = PackedVector2Array(-3.6, -2, -2.3400000000000003, -3, 2.3400000000000003, -3, 3.6, -2, 3.6, 0, 2.3400000000000003, 1, -2.3400000000000003, 1, -3.6, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaBinEast"]
+position = Vector2(0, -5.5)
+texture = ExtResource("tex_2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaBinEast"]
+position = Vector2(0, -3)
+shape = SubResource("shape_1")
+
+[node name="PlazaBenchEast" type="StaticBody2D" parent="."]
+position = Vector2(140, 61)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaBenchEast"]
+z_index = -1
+polygon = PackedVector2Array(-4.05, -2, -2.6325, -3, 2.6325, -3, 4.05, -2, 4.05, 0, 2.6325, 1, -2.6325, 1, -4.05, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaBenchEast"]
+position = Vector2(0, -8)
+texture = ExtResource("tex_1")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaBenchEast"]
+position = Vector2(0, -4)
+shape = SubResource("shape_2")
+
+[node name="PlazaPlanterFarEast" type="StaticBody2D" parent="."]
+position = Vector2(176, 61)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaPlanterFarEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaPlanterFarEast"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaPlanterFarEast"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="PlazaLampWest" type="StaticBody2D" parent="."]
+position = Vector2(-184, 77)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaLampWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaLampWest"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaLampWest"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="PlazaLampEast" type="StaticBody2D" parent="."]
+position = Vector2(184, 77)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="PlazaLampEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlazaLampEast"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlazaLampEast"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="StartTrafficWest" type="StaticBody2D" parent="."]
+position = Vector2(-148, 202)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="StartTrafficWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="StartTrafficWest"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartTrafficWest"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="StartTrafficEast" type="StaticBody2D" parent="."]
+position = Vector2(178, 202)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="StartTrafficEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="StartTrafficEast"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartTrafficEast"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="SouthTreeWest" type="StaticBody2D" parent="."]
+position = Vector2(-176, 229)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="SouthTreeWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="SouthTreeWest"]
+position = Vector2(0, -15)
+texture = ExtResource("tex_17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthTreeWest"]
+position = Vector2(0, -3)
+shape = SubResource("shape_3")
+
+[node name="SouthTreeEast" type="StaticBody2D" parent="."]
+position = Vector2(174, 229)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="SouthTreeEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="SouthTreeEast"]
+position = Vector2(0, -15)
+texture = ExtResource("tex_18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthTreeEast"]
+position = Vector2(0, -3)
+shape = SubResource("shape_3")
+
+[node name="SouthBench" type="StaticBody2D" parent="."]
+position = Vector2(-25, 228)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="SouthBench"]
+z_index = -1
+polygon = PackedVector2Array(-4.05, -2, -2.6325, -3, 2.6325, -3, 4.05, -2, 4.05, 0, 2.6325, 1, -2.6325, 1, -4.05, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="SouthBench"]
+position = Vector2(0, -8)
+texture = ExtResource("tex_1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthBench"]
+position = Vector2(0, -4)
+shape = SubResource("shape_2")
+
+[node name="SouthBin" type="StaticBody2D" parent="."]
+position = Vector2(-8, 228)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="SouthBin"]
+z_index = -1
+polygon = PackedVector2Array(-3.6, -2, -2.3400000000000003, -3, 2.3400000000000003, -3, 3.6, -2, 3.6, 0, 2.3400000000000003, 1, -2.3400000000000003, 1, -3.6, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="SouthBin"]
+position = Vector2(0, -5.5)
+texture = ExtResource("tex_2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthBin"]
+position = Vector2(0, -3)
+shape = SubResource("shape_1")
+
+[node name="SouthHome" type="StaticBody2D" parent="."]
+position = Vector2(-165, 314)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="SouthHome"]
+position = Vector2(0, -32)
+texture = ExtResource("tex_9")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthHome"]
+position = Vector2(0, -8)
+shape = SubResource("shape_9")
+
+[node name="SouthShop" type="StaticBody2D" parent="."]
+position = Vector2(137, 314)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="SouthShop"]
+position = Vector2(0, -40)
+texture = ExtResource("tex_7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthShop"]
+position = Vector2(0, -9)
+shape = SubResource("shape_11")
+
+[node name="ParkedGreenCar" type="StaticBody2D" parent="."]
+position = Vector2(-24, 286)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkedGreenCar"]
+z_index = -1
+polygon = PackedVector2Array(-7.2, -2, -4.680000000000001, -3, 4.680000000000001, -3, 7.2, -2, 7.2, 0, 4.680000000000001, 1, -4.680000000000001, 1, -7.2, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkedGreenCar"]
+position = Vector2(0, -10)
+texture = ExtResource("tex_6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkedGreenCar"]
+position = Vector2(0, -8.5)
+shape = SubResource("shape_6")
+
+[node name="ParkedTaxi" type="StaticBody2D" parent="."]
+position = Vector2(5, 286)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkedTaxi"]
+z_index = -1
+polygon = PackedVector2Array(-7.2, -2, -4.680000000000001, -3, 4.680000000000001, -3, 7.2, -2, 7.2, 0, 4.680000000000001, 1, -4.680000000000001, 1, -7.2, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkedTaxi"]
+position = Vector2(0, -10.5)
+texture = ExtResource("tex_14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkedTaxi"]
+position = Vector2(0, -8.5)
+shape = SubResource("shape_6")
+
+[node name="ParkedRedCar" type="StaticBody2D" parent="."]
+position = Vector2(34, 286)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkedRedCar"]
+z_index = -1
+polygon = PackedVector2Array(-7.2, -2, -4.680000000000001, -3, 4.680000000000001, -3, 7.2, -2, 7.2, 0, 4.680000000000001, 1, -4.680000000000001, 1, -7.2, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkedRedCar"]
+position = Vector2(0, -10.5)
+texture = ExtResource("tex_12")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkedRedCar"]
+position = Vector2(0, -8.5)
+shape = SubResource("shape_6")
+
+[node name="ParkingLampWest" type="StaticBody2D" parent="."]
+position = Vector2(-62, 264)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkingLampWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkingLampWest"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingLampWest"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="ParkingLampEast" type="StaticBody2D" parent="."]
+position = Vector2(66, 264)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkingLampEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.75, -2, -4.3875, -3, 4.3875, -3, 6.75, -2, 6.75, 0, 4.3875, 1, -4.3875, 1, -6.75, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkingLampEast"]
+position = Vector2(0, -14)
+texture = ExtResource("tex_10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingLampEast"]
+position = Vector2(0, -2.5)
+shape = SubResource("shape_0")
+
+[node name="ParkingPlanterWest" type="StaticBody2D" parent="."]
+position = Vector2(-61, 302)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkingPlanterWest"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkingPlanterWest"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingPlanterWest"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="ParkingPlanterEast" type="StaticBody2D" parent="."]
+position = Vector2(64, 302)
+collision_layer = 1
+collision_mask = 0
+
+[node name="Shadow" type="Polygon2D" parent="ParkingPlanterEast"]
+z_index = -1
+polygon = PackedVector2Array(-6.3, -2, -4.095, -3, 4.095, -3, 6.3, -2, 6.3, 0, 4.095, 1, -4.095, 1, -6.3, 0)
+color = Color(0.15, 0.24, 0.25, 0.27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParkingPlanterEast"]
+position = Vector2(0, -16)
+texture = ExtResource("tex_16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkingPlanterEast"]
+position = Vector2(0, -3)
+shape = SubResource("shape_4")
+
+[node name="SouthUtilityLine" type="Node2D" parent="."]
+position = Vector2(-31, 315)
+
+[node name="Sprite2D" type="Sprite2D" parent="SouthUtilityLine"]
+position = Vector2(0, -11)
+texture = ExtResource("tex_11")
