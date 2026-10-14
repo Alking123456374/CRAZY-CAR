@@ -204,7 +204,7 @@ offset_right = 90.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "体力"
+text = "STAMINA"
 
 [node name="StaminaBar" type="ProgressBar" parent="CanvasLayer/staminaUI" unique_id=642449197]
 layout_mode = 0

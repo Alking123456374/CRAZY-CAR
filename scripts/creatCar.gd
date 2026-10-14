@@ -50,5 +50,6 @@ func respawn_body(bodyPositon : Vector2):
 	$"../player".visible = true
 	$"../player/CollisionShape2D".set_deferred("disabled",false)
 	$"../player".position = bodyPositon
+	$"../player".stamina = $"../player".max_stamina
 	Global.inputEnable = true
 	

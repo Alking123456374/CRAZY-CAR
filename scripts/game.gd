@@ -53,7 +53,10 @@ func reset_game():
 	var setPosition = $player.position
 	var people = peopleImg.instantiate()
 	people.position = setPosition
+	people.z_as_relative = false
+	people.z_index = 100
 	$player.position = Global.playerPosition
+	$player.stamina = $player.max_stamina
 	$basic_Map.add_child(people)
 	
 # 得分后加快车生成速度
