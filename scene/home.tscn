@@ -25,66 +25,66 @@
 [ext_resource type="AudioStream" path="res://audio/S31-City on Speed.ogg" id="music"]
 
 [sub_resource type="StyleBoxFlat" id="score"]
-bg_color = Color(0.09804, 0.21569, 0.18039, 1.00000)
+bg_color = Color(1.00000, 0.97647, 0.93333, 1.00000)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.20392, 0.32941, 0.27843, 1.00000)
+border_color = Color(0.60000, 0.72941, 0.81961, 1.00000)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="frame"]
-bg_color = Color(0.12941, 0.24706, 0.20784, 1.00000)
+bg_color = Color(1.00000, 0.97647, 0.93333, 1.00000)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.29412, 0.41176, 0.34510, 1.00000)
+border_color = Color(0.53333, 0.67059, 0.77255, 1.00000)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-shadow_color = Color(0.02353, 0.10196, 0.08235, 0.65000)
-shadow_size = 16
+shadow_color = Color(0.33333, 0.53333, 0.67059, 0.24000)
+shadow_size = 12
 shadow_offset = Vector2(0, 6)
 
 [sub_resource type="StyleBoxFlat" id="key"]
-bg_color = Color(0.10588, 0.21961, 0.18431, 1.00000)
+bg_color = Color(0.92549, 0.96471, 0.98824, 1.00000)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.27059, 0.37647, 0.32157, 1.00000)
+border_color = Color(0.58824, 0.72157, 0.81176, 1.00000)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="normal"]
-bg_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+bg_color = Color(0.96078, 0.54118, 0.43922, 1.00000)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
-shadow_color = Color(0.02353, 0.10196, 0.08235, 0.65000)
-shadow_size = 6
+shadow_color = Color(0.38824, 0.54118, 0.67059, 0.28000)
+shadow_size = 5
 shadow_offset = Vector2(0, 6)
 
 [sub_resource type="StyleBoxFlat" id="hover"]
-bg_color = Color(1.00000, 0.90196, 0.60392, 1.00000)
+bg_color = Color(1.00000, 0.64706, 0.54902, 1.00000)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
-shadow_color = Color(0.02353, 0.10196, 0.08235, 0.65000)
-shadow_size = 8
+shadow_color = Color(0.38824, 0.54118, 0.67059, 0.24000)
+shadow_size = 6
 shadow_offset = Vector2(0, 6)
 
 [sub_resource type="StyleBoxFlat" id="pressed"]
-bg_color = Color(0.77647, 0.67451, 0.31373, 1.00000)
+bg_color = Color(0.90980, 0.47451, 0.38039, 1.00000)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -96,7 +96,7 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1.00000, 0.95294, 0.69412, 1.00000)
+border_color = Color(0.20784, 0.29804, 0.47843, 1.00000)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
@@ -153,7 +153,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.06275, 0.16078, 0.13725, 1.00000)
+color = Color(0.77647, 0.89804, 0.95686, 1.00000)
 
 [node name="Layout" type="Control" parent="."]
 layout_mode = 0
@@ -170,7 +170,7 @@ offset_top = 37
 offset_right = 76
 offset_bottom = 49
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+color = Color(0.96078, 0.54118, 0.43922, 1.00000)
 
 [node name="Brand" type="Label" parent="Layout"]
 layout_mode = 0
@@ -179,7 +179,7 @@ offset_top = 30
 offset_right = 436
 offset_bottom = 58
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_colors/font_color = Color(0.27843, 0.40392, 0.52157, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 13
 text = "FROGGER  /  STREET ARCADE"
@@ -192,7 +192,7 @@ offset_top = 30
 offset_right = 1086
 offset_bottom = 58
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_colors/font_color = Color(0.32157, 0.43529, 0.53725, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 12
 text = "ONE MORE CROSSING."
@@ -206,7 +206,7 @@ offset_top = 68
 offset_right = 1086
 offset_bottom = 69
 mouse_filter = 2
-color = Color(0.21176, 0.32157, 0.27843, 1.00000)
+color = Color(0.55294, 0.72157, 0.81569, 1.00000)
 
 [node name="Menu" type="Control" parent="Layout"]
 layout_mode = 0
@@ -223,7 +223,7 @@ offset_top = 0
 offset_right = 490
 offset_bottom = 24
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_colors/font_color = Color(0.68235, 0.28627, 0.23137, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 13
 text = "READY FOR THE RUSH?"
@@ -236,15 +236,15 @@ offset_top = 26
 offset_right = 506
 offset_bottom = 210
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_colors/font_color = Color(0.20784, 0.29804, 0.47843, 1.00000)
 theme_override_fonts/font = ExtResource("title")
 theme_override_font_sizes/font_size = 98
 text = "CRAZY\nCAR"
 vertical_alignment = 1
 theme_override_constants/line_spacing = -23
-theme_override_colors/font_shadow_color = Color(0.00000, 0.00000, 0.00000, 0.35000)
+theme_override_colors/font_shadow_color = Color(1.00000, 0.97647, 0.93333, 0.95000)
 theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_y = 4
 
 [node name="Tagline" type="Label" parent="Layout/Menu"]
 layout_mode = 0
@@ -253,7 +253,7 @@ offset_top = 219
 offset_right = 490
 offset_bottom = 251
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_colors/font_color = Color(0.27843, 0.40392, 0.52157, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 17
 text = "DODGE. CROSS. REPEAT."
@@ -275,7 +275,7 @@ offset_top = 16
 offset_right = 3
 offset_bottom = 50
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+color = Color(0.96078, 0.54118, 0.43922, 1.00000)
 
 [node name="ScoreCaption" type="Label" parent="Layout/Menu/ScorePanel"]
 layout_mode = 0
@@ -284,7 +284,7 @@ offset_top = 9
 offset_right = 247
 offset_bottom = 29
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_colors/font_color = Color(0.32157, 0.43529, 0.53725, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 11
 text = "PERSONAL BEST"
@@ -297,7 +297,7 @@ offset_top = 30
 offset_right = 247
 offset_bottom = 55
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_colors/font_color = Color(0.20784, 0.29804, 0.47843, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 14
 text = "CROSSINGS"
@@ -310,7 +310,7 @@ offset_top = 4
 offset_right = 327
 offset_bottom = 60
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_colors/font_color = Color(0.68235, 0.28627, 0.23137, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 32
 text = "000"
@@ -331,10 +331,10 @@ theme_override_styles/normal = SubResource("normal")
 theme_override_styles/hover = SubResource("hover")
 theme_override_styles/pressed = SubResource("pressed")
 theme_override_styles/focus = SubResource("focus")
-theme_override_colors/font_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
-theme_override_colors/font_hover_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
-theme_override_colors/font_pressed_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
-theme_override_colors/font_focus_color = Color(0.06275, 0.16078, 0.13725, 1.00000)
+theme_override_colors/font_color = Color(0.14902, 0.21961, 0.34118, 1.00000)
+theme_override_colors/font_hover_color = Color(0.14902, 0.21961, 0.34118, 1.00000)
+theme_override_colors/font_pressed_color = Color(0.14902, 0.21961, 0.34118, 1.00000)
+theme_override_colors/font_focus_color = Color(0.14902, 0.21961, 0.34118, 1.00000)
 
 [node name="StartHint" type="Label" parent="Layout/Menu"]
 layout_mode = 0
@@ -343,7 +343,7 @@ offset_top = 437
 offset_right = 346
 offset_bottom = 459
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_colors/font_color = Color(0.32157, 0.43529, 0.53725, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 11
 text = "PRESS ENTER TO PLAY"
@@ -366,7 +366,7 @@ offset_top = 8
 offset_right = 278
 offset_bottom = 36
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_colors/font_color = Color(0.20784, 0.29804, 0.47843, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 12
 text = "THE CITY CROSSING"
@@ -379,7 +379,7 @@ offset_top = 19
 offset_right = 392
 offset_bottom = 25
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+color = Color(0.96078, 0.54118, 0.43922, 1.00000)
 
 [node name="LiveCaption" type="Label" parent="Layout/Preview"]
 layout_mode = 0
@@ -388,7 +388,7 @@ offset_top = 8
 offset_right = 450
 offset_bottom = 36
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_colors/font_color = Color(0.68235, 0.28627, 0.23137, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 10
 text = "LIVE"
@@ -413,7 +413,7 @@ mouse_filter = 2
 texture = ExtResource("map")
 expand_mode = 1
 stretch_mode = 0
-modulate = Color(0.63137, 0.70980, 0.62745, 1.00000)
+modulate = Color(1.00000, 1.00000, 1.00000, 1.00000)
 
 [node name="House" type="TextureRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -466,7 +466,7 @@ offset_top = 58
 offset_right = 243
 offset_bottom = 67
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route01" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -475,7 +475,7 @@ offset_top = 81
 offset_right = 243
 offset_bottom = 90
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route02" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -484,7 +484,7 @@ offset_top = 104
 offset_right = 243
 offset_bottom = 113
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route03" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -493,7 +493,7 @@ offset_top = 127
 offset_right = 243
 offset_bottom = 136
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route04" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -502,7 +502,7 @@ offset_top = 150
 offset_right = 243
 offset_bottom = 159
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route05" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -511,7 +511,7 @@ offset_top = 173
 offset_right = 243
 offset_bottom = 182
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route06" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -520,7 +520,7 @@ offset_top = 196
 offset_right = 243
 offset_bottom = 205
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route07" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -529,7 +529,7 @@ offset_top = 219
 offset_right = 243
 offset_bottom = 228
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route08" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -538,7 +538,7 @@ offset_top = 242
 offset_right = 243
 offset_bottom = 251
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route09" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -547,7 +547,7 @@ offset_top = 265
 offset_right = 243
 offset_bottom = 274
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Route10" type="ColorRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -556,12 +556,12 @@ offset_top = 288
 offset_right = 243
 offset_bottom = 297
 mouse_filter = 2
-color = Color(0.95686, 0.83922, 0.42353, 0.55000)
+color = Color(1.00000, 0.90980, 0.58431, 0.85000)
 
 [node name="Destination" type="Polygon2D" parent="Layout/Preview/Street"]
 position = Vector2(241, 47)
 polygon = PackedVector2Array(-7, 8, 0, 0, 7, 8, 3, 8, 3, 14, -3, 14, -3, 8)
-color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+color = Color(1.00000, 0.90980, 0.58431, 1.00000)
 
 [node name="GreenCar" type="TextureRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -599,7 +599,7 @@ stretch_mode = 0
 [node name="HeroShadow" type="Polygon2D" parent="Layout/Preview/Street"]
 position = Vector2(241, 356)
 polygon = PackedVector2Array(-26, -7, -18, -11, 18, -11, 26, -7, 26, 7, 18, 11, -18, 11, -26, 7)
-color = Color(0.03529, 0.11765, 0.09412, 0.45000)
+color = Color(0.20784, 0.29804, 0.47843, 0.28000)
 
 [node name="Hero" type="TextureRect" parent="Layout/Preview/Street"]
 layout_mode = 0
@@ -619,13 +619,13 @@ offset_top = 356
 offset_right = 350
 offset_bottom = 380
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.95686, 0.83922, 0.42353, 1.00000)
+theme_override_colors/font_color = Color(1.00000, 0.95686, 0.77255, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 10
 text = "YOUR NEXT ADVENTURE"
 vertical_alignment = 1
 horizontal_alignment = 1
-theme_override_colors/font_shadow_color = Color(0.03922, 0.12549, 0.09412, 1.00000)
+theme_override_colors/font_shadow_color = Color(0.16078, 0.22745, 0.38039, 1.00000)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 2
 
@@ -636,7 +636,7 @@ offset_top = 550
 offset_right = 1086
 offset_bottom = 574
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_colors/font_color = Color(0.32157, 0.43529, 0.53725, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 11
 text = "WATCH THE TRAFFIC. FIND YOUR MOMENT."
@@ -650,7 +650,7 @@ offset_top = 588
 offset_right = 1086
 offset_bottom = 589
 mouse_filter = 2
-color = Color(0.21176, 0.32157, 0.27843, 1.00000)
+color = Color(0.55294, 0.72157, 0.81569, 1.00000)
 
 [node name="MoveKey" type="Panel" parent="Layout"]
 layout_mode = 0
@@ -668,7 +668,7 @@ offset_top = 0
 offset_right = 69
 offset_bottom = 27
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_colors/font_color = Color(0.20784, 0.29804, 0.47843, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 12
 text = "WASD"
@@ -682,7 +682,7 @@ offset_top = 607
 offset_right = 416
 offset_bottom = 634
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_colors/font_color = Color(0.27843, 0.40392, 0.52157, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 12
 text = "/ ARROWS TO MOVE"
@@ -704,7 +704,7 @@ offset_top = 0
 offset_right = 76
 offset_bottom = 27
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.94902, 0.93725, 0.85098, 1.00000)
+theme_override_colors/font_color = Color(0.20784, 0.29804, 0.47843, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 12
 text = "SHIFT"
@@ -718,7 +718,7 @@ offset_top = 607
 offset_right = 707
 offset_bottom = 634
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.63529, 0.78431, 0.68235, 1.00000)
+theme_override_colors/font_color = Color(0.27843, 0.40392, 0.52157, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 12
 text = "TO SPRINT"
@@ -731,7 +731,7 @@ offset_top = 607
 offset_right = 1086
 offset_bottom = 634
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.42353, 0.56863, 0.51373, 1.00000)
+theme_override_colors/font_color = Color(0.32157, 0.43529, 0.53725, 1.00000)
 theme_override_fonts/font = ExtResource("pixel")
 theme_override_font_sizes/font_size = 11
 text = "EVERY CROSSING COUNTS."
